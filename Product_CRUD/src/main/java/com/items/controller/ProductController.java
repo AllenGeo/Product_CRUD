@@ -63,7 +63,7 @@ public class ProductController {
 	    }
 	}
 	
-@GetMapping("/products/{_id}")
+	@GetMapping("/products/{_id}")
 	
 	public ResponseEntity  getAllProductsById(@PathVariable String _id){
 		
@@ -72,7 +72,7 @@ public class ProductController {
 		if(!product.isEmpty()) {
 			return ResponseEntity.ok(product.get());
 		} else {
-			return ResponseEntity.ok("Product with id "+ _id + " not found");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product with id "+ _id + " not found");
 		}
 	}
 	
@@ -90,9 +90,9 @@ public class ProductController {
 	    }
 
 	    if (!products.isEmpty()) {
-	        return ResponseEntity.ok(products);
+	        return ResponseEntity.ok(products); 
 	    } else {
-	        return ResponseEntity.ok(Collections.emptyList());
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.emptyList());
 	    }
 	}
 	
