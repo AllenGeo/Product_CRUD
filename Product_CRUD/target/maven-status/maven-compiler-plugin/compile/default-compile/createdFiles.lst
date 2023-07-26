@@ -1,0 +1,10 @@
+com\items\controller\ProductController.class
+com\items\model\Items.class
+com\items\resources\ProductRequest.class
+com\items\model\inventory\ItemInventory.class
+com\items\model\Review.class
+com\items\model\inventory\Stock.class
+com\items\model\itemPrice.class
+com\items\repository\ProductRepository.class
+com\items\model\stockDetails.class
+com\items\ProductCrudApplication.class
